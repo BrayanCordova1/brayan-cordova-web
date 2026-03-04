@@ -1,1 +1,108 @@
 @import "tailwindcss";
+
+@theme
+{
+  --font-jost: 'Jost', sans-serif;
+  --font-kodchasan: 'Kodchasan', sans-serif;
+  --color-gradiant: linear-gradient(180deg, #0A0A0A -12.79%, #171717 100%);
+}
+
+@utility f-h1
+{
+  @apply font-kodchasan transition-all text-white font-bold text-3xl md:text-3xl lg:text-5xl xl:text-7xl;
+}
+
+@utility f-h2
+{
+  @apply font-kodchasan transition-all text-white font-bold text-3xl md:text-3xl lg:text-5xl xl:text-6xl;
+}
+
+@utility f-h3
+{
+  @apply font-kodchasan transition-all text-white font-bold text-sm md:text-sm lg:text-2xl xl:text-3xl;
+}
+
+@utility f-h4
+{
+  @apply font-kodchasan transition-all text-white font-bold text-xs md:text-xs lg:text-xs xl:text-base;
+}
+
+@utility f-xl
+{
+  @apply duration-75 font-jost text-lg md:text-lg lg:text-2xl xl:text-4xl;
+}
+
+@utility f-lg
+{
+  @apply duration-75 font-jost text-base md:text-base lg:text-xl xl:text-3xl;
+}
+
+@utility f-base
+{
+  @apply duration-75 font-jost text-sm md:text-sm lg:text-lg xl:text-2xl;
+}
+
+@utility f-sm
+{
+  @apply duration-75 font-jost text-xs md:text-xs lg:text-sm xl:text-base;
+}
+
+@utility f-xs
+{
+  @apply duration-75 font-jost text-xs md:text-xs lg:text-xs xl:text-xs
+}
+
+@utility b-round
+{
+  @apply rounded md:rounded-md lg:rounded-lg xl:rounded-lg;
+}
+
+@utility b-round-t
+{
+  @apply rounded-t-sm md:rounded-t-md lg:rounded-t-lg xl:rounded-t-lg;
+}
+
+@utility b-round-b
+{
+  @apply rounded-b-sm md:rounded-b-md lg:rounded-b-lg xl:rounded-b-lg;
+}
+
+@utility b-round-tr
+{
+  @apply rounded-tr-sm md:rounded-tr-md lg:rounded-tr-lg xl:rounded-tr-lg;
+}
+
+@utility b-round-tl
+{
+  @apply rounded-tl-sm md:rounded-tl-md lg:rounded-tl-lg xl:rounded-tl-lg;
+}
+
+@utility b-round-bl
+{
+  @apply rounded-bl-sm md:rounded-bl-md lg:rounded-bl-lg xl:rounded-bl-lg;
+}
+
+@utility b-round-br
+{
+  @apply rounded-br-sm md:rounded-br-md lg:rounded-br-lg xl:rounded-br-lg;
+}
+
+@utility b-px
+{
+  @apply px-2 md:px-12 lg:px-10 xl:px-14
+}
+
+@utility b-mt
+{
+  @apply mt-5 md:mt-8 lg:mt-11 xl:mt-16
+}
+
+@utility b-mb
+{
+  @apply mb-5 md:mb-8 lg:mb-11 xl:mb-16
+}
+
+@utility b-gap
+{
+  @apply gap-4 md:gap-5 lg:gap-4 xl:gap-4
+}
