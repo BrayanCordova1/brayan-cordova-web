@@ -1,0 +1,11 @@
+---
+const date = new Date().toLocaleDateString('es', {
+  year: 'numeric',
+  month: 'long',
+  day: '2-digit',
+});
+---
+
+<div class='flex px-2.5 py-5 flex-col items-center self-stretch font-xs'>
+  © {new Date().getFullYear()} Brayan Cordova. Ultima actualización: {date}
+</div>
