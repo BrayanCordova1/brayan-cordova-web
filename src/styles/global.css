@@ -89,20 +89,10 @@
 
 @utility b-px
 {
-  @apply px-2 md:px-12 lg:px-10 xl:px-14
-}
-
-@utility b-mt
-{
-  @apply mt-5 md:mt-8 lg:mt-11 xl:mt-16
+  @apply px-2 md:px-12 lg:px-14 xl:px-16 2xl:px-28
 }
 
 @utility b-mb
 {
   @apply mb-5 md:mb-8 lg:mb-11 xl:mb-16
-}
-
-@utility b-gap
-{
-  @apply gap-4 md:gap-5 lg:gap-4 xl:gap-4
 }

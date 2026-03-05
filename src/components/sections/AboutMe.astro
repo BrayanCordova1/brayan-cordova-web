@@ -1,0 +1,93 @@
+---
+import Peru from "@assets/icons/flag/Peru.svg";
+import Github from "@assets/icons/logo/Github.svg";
+import Document from "@assets/icons/Document.svg";
+import Linkedin from "@assets/icons/logo/Linkedin.svg";
+import Email from "@assets/icons/logo/Email.svg";
+import SocialItem from "@components/ui/SocialItem.astro";
+import CardExperience from "@components/ui/CardExperience.astro";
+import Title from "@components/ui/Title.astro";
+import { idiomas } from "@/content/me";
+---
+
+<div class='flex flex-col items-center gap-6 self-stretch'>
+  <Title id='section-aboutme' title='Sobre mi...' description='Descubre mi trayectoria, formación técnica y el stack tecnológico' />
+
+  <div class='flex flex-col items-start self-stretch gap-3 md:gap-5'>
+    <div class='flex justify-between items-center content-center gap-2.5 self-stretch flex-wrap'>
+      <p>Brayan Cordova</p>
+      <div class='flex items-center gap-4 md:gap-8'>
+        <p class='flex items-center gap-2'>
+          <span class='font-bold'>Edad:</span>
+          {new Date().getFullYear() - 2005} años
+        </p>
+        <p class='flex items-center gap-2'>
+          <span class='font-bold'>Nacionalidad:</span> Lima, Perú
+          <Peru width={20} height={20} />
+        </p>
+      </div>
+    </div>
+
+    <p class='text-neutral-400'>
+      Soy un Desarrollador Web con conocimientos en UI/UX y optimización de rendimiento. Más allá de escribir código limpio en entornos como Astro y React, gestiono proyectos de inicio a fin (como Lumia Creators), desde la arquitectura de
+      la interfaz hasta la infraestructura técnica en servidores. Me enfoco en entregar productos digitales que no solo se vean bien, sino que sean rápidos, accesibles y escalables.
+    </p>
+  </div>
+
+  <div class='flex flex-col border border-transparent b-round [border-image:linear-gradient(180deg,#171717_0%,#0A0A0A00_100%)_1] w-full'>
+    <div class='grid grid-flow-col items-center overflow-x-auto self-stretch'>
+      <SocialItem link='https://github.com/BrayanCordova1' label='GIthub'>
+        <Github class={"size-4 lg:size-7"} />
+      </SocialItem>
+      <SocialItem link='https://drive.google.com/file/d/1GX42Bo-XzRpDILvAX1o31ICYhKJexsRb/view?usp=sharing' label='CV'>
+        <Document class={"size-4 lg:size-7"} />
+      </SocialItem>
+      <SocialItem link='https://www.linkedin.com/in/brayan-cordova-tasayco/' label='Linkedin'>
+        <Linkedin class={"size-4 lg:size-7"} />
+      </SocialItem>
+      <SocialItem link='mailto:brayansmithcordovatasayco@gmail.com' label='Email'>
+        <Email class={"size-4 lg:size-7"} />
+      </SocialItem>
+    </div>
+
+    <div class='grid grid-cols-1 md:grid-cols-2'>
+      <div class='flex px-4 py-6 flex-col gap-2 md:gap-4'>
+        <h3 class='f-h3 text-neutral-400'>Experiencia</h3>
+        <div class='flex flex-col items-start gap-2.5 '>
+          <CardExperience
+            title='Lead Frontend developer & UX/UI Designer'
+            ong='ONG Mujer la educación es poder'
+            description='Desarrollé y desplegué una plataforma web para una ONG, mejorando la experiencia del usuario, el rendimiento y el SEO. Lideré el equipo de desarrollo y aseguré la adaptabilidad multiplataforma, utilizando tecnologías como React, Tailwind CSS y Astro.'
+            date='Dic 2024 - Feb 2025'
+          >
+          </CardExperience>
+        </div>
+      </div>
+
+      <div class='flex px-4 py-6 flex-col gap-2 md:gap-4'>
+        <h3 class='f-h3 text-neutral-400'>Educación</h3>
+        <div class='flex flex-col items-start gap-2.5'>
+          <CardExperience title='Computación e informática' ong='CIBERTEC - Formación Profesional Técnica Superior' date='Jul 2022 - Jul 2025'>
+          </CardExperience>
+        </div>
+      </div>
+    </div>
+
+    <div class='flex py-8 px-4 justify-between items-center flex-wrap border-b border-t border-transparent [border-image:linear-gradient(0deg,#171717_0%,#0A0A0A00_100%)_1]'>
+      <h3 class='f-h3 text-neutral-400'>Idiomas que hablo</h3>
+      <div class='flex items-start gap-8 flex-wrap'>
+        {
+          idiomas.map((idioma) => (
+            <div class='flex items-center gap-3'>
+              <idioma.icon class={"size-10 md:size-12"} />
+              <div class='flex flex-col items-start justify-center self-stretch'>
+                <p class='f-sm font-bold'>{idioma.idioma}</p>
+                <p class='f-xs text-neutral-500'>{idioma.nivel}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</div>
