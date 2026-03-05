@@ -1,0 +1,61 @@
+---
+import Menu from "@assets/icons/Menu.svg";
+import MobileNav from "@components/layout/MobileNav.astro";
+import { navigation } from "@/content/navigation";
+---
+
+<nav class='w-full py-2 md:px-4 lg:px-6 xl:px-7 md:py-2 lg:py-4 xl:py-6 z-30 duration-500 px-2 pt-4 pb-2 inline-flex justify-between'>
+  <div class='flex-col'>
+    <p class='font-bold f-sm'>Brayan Cordova (Gunix06)</p>
+    <span class='text-neutral-400 f-sm'>Frontend Developer</span>
+  </div>
+  <div class='b-round border border-neutral-900 md:bg-neutral-950/50 md:backdrop-blur-xs md:flex gap-2 items-center'>
+    <button id='open-menu-btn'>
+      <Menu class='cursor-pointer md:hidden' />
+    </button>
+		{navigation.map(item => (
+			<a href={item.slug} class='px-3 py-2 hover:text-red-400 f-sm font-bold duration-500 max-md:hidden'>
+				{item.label}
+			</a>
+		))}
+  </div>
+</nav>
+
+<MobileNav />
+
+<script>
+  function setupMobileMenu() {
+    const openMenuBtn = document.getElementById("open-menu-btn");
+    const closeMenuBtn = document.getElementById("close-menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const menuOverlay = document.getElementById("mobile-menu-overlay");
+    const menuLinks = document.querySelectorAll(".mobile-nav-link");
+
+    openMenuBtn?.addEventListener("click", () => {
+      console.log("abriendo");
+      mobileMenu?.classList.add("active");
+      document.body.style.overflow = "hidden";
+    });
+
+    const closeMenu = () => {
+      console.log("cerrando");
+      mobileMenu?.classList.remove("active");
+      document.body.style.overflow = "";
+    };
+
+    closeMenuBtn?.addEventListener("click", closeMenu);
+    menuOverlay?.addEventListener("click", closeMenu);
+    menuLinks.forEach(link => {
+      link.addEventListener("click", closeMenu);
+    });
+
+    document.addEventListener("keydown", e => {
+      if (e.key === "Escape" && mobileMenu?.classList.contains("active")) {
+        closeMenu();
+      }
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", setupMobileMenu);
+  document.addEventListener("astro:page-load", setupMobileMenu);
+</script>

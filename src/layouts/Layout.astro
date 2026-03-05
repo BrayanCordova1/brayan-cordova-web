@@ -1,24 +1,29 @@
 ---
 import Footer from "@/components/layout/Footer.astro";
 import "../styles/global.css";
+import Nav from "@/components/layout/Nav.astro";
 ---
+
 <!doctype html>
-<html lang="es">
-	<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
+<html lang='es'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <meta name='generator' content={Astro.generator} />
     <title>Brayan Cordova | Desarrollador Web - Portafolio de Proyectos</title>
     <meta
-      name="keywords"
-      content="Brayan Cordova, desarrollador web, portafolio de desarrollador web, proyectos web, desarrollo frontend, desarrollo backend, JavaScript, React, Node.js, Astro JS, Next.js, Tailwind CSS, Preact, TypeScript, Vercel, Git, MySQL, SEO, Google Analytics, diseño UX/UI, desarrollo de aplicaciones web, soluciones web personalizadas, desarrollador web Perú, desarrollador web Lima, Gunix06, creación de experiencias web, optimización web, desarrollo de plataformas web, consultor web, web developer, web development, web designer, web design, webmaster, webmaster Perú, webmaster Lima, webmaster Lima Perú"
+      name='keywords'
+      content='Brayan Cordova, desarrollador web, portafolio de desarrollador web, proyectos web, desarrollo frontend, desarrollo backend, JavaScript, React, Node.js, Astro JS, Next.js, Tailwind CSS, Preact, TypeScript, Vercel, Git, MySQL, SEO, Google Analytics, diseño UX/UI, desarrollo de aplicaciones web, soluciones web personalizadas, desarrollador web Perú, desarrollador web Lima, Gunix06, creación de experiencias web, optimización web, desarrollo de plataformas web, consultor web, web developer, web development, web designer, web design, webmaster, webmaster Perú, webmaster Lima, webmaster Lima Perú'
     />
-	</head>
-	<body>
-		<slot />
-		<Footer/>
-	</body>
+  </head>
+  <body>
+    <Nav />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
 </html>
 
 <style>
@@ -33,13 +38,7 @@ import "../styles/global.css";
     width: 100%;
     height: 100%;
     background-color: #0a0a0a;
-    background-image:
-      radial-gradient(
-        ellipse at top center,
-        rgba(255, 0, 0, 0.3) 0%,
-        transparent 40%
-      ),
-      radial-gradient(circle at center, #0a0a0a 42%, #030000 98%, #0a0a0a 100%);
+    background-image: radial-gradient(ellipse at top center, rgba(255, 0, 0, 0.3) 0%, transparent 40%), radial-gradient(circle at center, #0a0a0a 42%, #030000 98%, #0a0a0a 100%);
     background-repeat: no-repeat, no-repeat;
     background-position:
       top center,

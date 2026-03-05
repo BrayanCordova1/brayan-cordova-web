@@ -1,11 +1,8 @@
 ---
-const date = new Date().toLocaleDateString('es', {
-  year: 'numeric',
-  month: 'long',
-  day: '2-digit',
-});
+import FormatedDate from "../utils/FormatedDate.astro";
+const date = new Date();
 ---
 
-<div class='flex px-2.5 py-5 flex-col items-center self-stretch font-xs'>
-  © {new Date().getFullYear()} Brayan Cordova. Ultima actualización: {date}
-</div>
+<p class='mx-auto py-5 items-center self-stretch f-xs'>
+  ©{date.getFullYear()} Brayan Cordova. Ultima actualización: <FormatedDate date={date} />
+</p>
