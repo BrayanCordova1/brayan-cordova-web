@@ -1,0 +1,56 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  autor: string;
+}
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const {title, description, autor} = Astro.props;
+---
+
+<meta charset='utf-8' />
+<meta name='apple-mobile-web-app-capable' content='yes' />
+<meta name='title' content={title} />
+<meta name='description' content={description} />
+<meta name='application-name' content='Brayan Cordova' />
+<meta name='author' content={autor} />
+<meta name='generator' content={Astro.generator} />
+<link rel='canonical' href={canonicalURL} />
+<meta http-equiv='Content-Language' content={"es"} />
+<meta name='viewport' content='width=device-width,initial-scale=1' />
+<meta name='creator' content={autor} />
+<meta name='robots' content={"index, follow"} />
+<meta name='googlebot' content='index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1' />
+<meta name='format-detection' content='telephone=no, address=no, email=no' />
+
+<link rel='icon' type='image/x-icon' href='/favicon.ico' />
+<link rel='mask-icon' href='/favicon.ico' color='#8D46E7' />
+<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+<meta property='og:url' content={Astro.url} />
+<meta property='og:title' content={title} />
+<meta property='og:locale' content={"es"} />
+<meta property='og:site_name' content='Brayan Cordova' />
+<meta property='og:description' content={description} />
+<meta property='og:author' content={autor} />
+<meta property='og:image:alt' content={title} />
+<meta name='referrer' content='strict-origin-when-cross-origin' />
+<meta name='apple-mobile-web-app-status-bar-style' content='black-translucent' />
+<meta name='apple-mobile-web-app-title' content='Brayan Cordova' />
+<meta name='mobile-web-app-capable' content='yes' />
+<meta name='msapplication-config' content='/browserconfig.xml' />
+<meta name='twitter:card' content='summary_large_image' />
+<meta name='twitter:url' content={Astro.url} />
+<meta name='twitter:site' content='@Gunix06' />
+<meta name='twitter:title' content={title} />
+<meta name='twitter:description' content={description} />
+<meta name='twitter:creator' content='@Gunix06' />
+<meta name='twitter:image:alt' content={title} />
+<meta property='og:image:width' content={"1280"} />
+<meta property='og:image:height' content={"720"} />
+<meta property='og:image:type' content={"image/png"} />
+<meta property='og:image:alt' content={title} />
+<meta
+  name='keywords'
+  content='Brayan Cordova, desarrollador web, portafolio de desarrollador web, proyectos web, desarrollo frontend, desarrollo backend, JavaScript, React, Node.js, Astro JS, Next.js, Tailwind CSS, Preact, TypeScript, Vercel, Git, MySQL, SEO, Google Analytics, diseño UX/UI, desarrollo de aplicaciones web, soluciones web personalizadas, desarrollador web Perú, desarrollador web Lima, Gunix06, creación de experiencias web, optimización web, desarrollo de plataformas web, consultor web, web developer, web development, web designer, web design, webmaster, webmaster Perú, webmaster Lima, webmaster Lima Perú'
+/>

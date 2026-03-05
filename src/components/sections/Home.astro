@@ -1,0 +1,122 @@
+---
+import Work from "@assets/icons/Work.svg";
+import Document from "@assets/icons/Document.svg";
+import Corazon from "@assets/icons/Corazon.svg";
+import Button from "@components/ui/Button.astro";
+---
+
+<div class='flex flex-col items-center justify-center gap-4 relative h-svh w-full px-2'>
+  <h1 class='f-h1 text-center bg-linear-to-r from-neutral-50 from-40% to-red-950 bg-clip-text text-transparent xl:leading-20'>
+    Impulsado por la Pasión<br />
+    Forjado por la Experiencia
+  </h1>
+  <div class='flex pt-7 pb-10 justify-center gap-5'>
+    <Button label='Ver Proyectos' href='#section-projects'>
+      <Work class='icon-min' />
+    </Button>
+    <Button label='Ver CV' href='https://drive.google.com/file/d/1gdxkLeqyuxV8LewtQDZoJ_BT15V_5hR4/view?usp=sharing'>
+      <Document class='icon-min' />
+    </Button>
+    <Button id='contador-clickeame' label='Clickeame :)'>
+      <Corazon class='icon-min' />
+    </Button>
+  </div>
+  <div id='corazon-final' style='display:none;' class='flex flex-row items-center gap-3 w-full justify-center duration-500 pt-4 md:pt-0'>
+    <Corazon class='icon-min animate-pop-abajo' style='margin-top: 0;' />
+    <span id='texto-clickeame' class='mt-0 f-sm text-left text-neutral-300 opacity-0'></span>
+  </div>
+</div>
+
+<script>
+  import { actions } from "astro:actions";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const btnClickeame = document.getElementById("contador-clickeame") as HTMLButtonElement;
+    const corazonFinal = document.getElementById("corazon-final") as HTMLDivElement;
+    const textoClickeame = document.getElementById("texto-clickeame") as HTMLSpanElement;
+
+    if (localStorage.getItem("yaClickeo")) {
+      btnClickeame.style.display = "none";
+      corazonFinal.style.display = "flex";
+      getClicks().then(clicks => {
+        textoClickeame.textContent = `Tú y ${clicks - 1} personas más lo clickearon :)`;
+        setTimeout(() => {
+          textoClickeame.classList.add("fade-in-smooth");
+        }, 300);
+      });
+    } else {
+      btnClickeame.style.display = "";
+      corazonFinal.style.display = "none";
+    }
+
+    btnClickeame.addEventListener("click", async e => {
+      e.preventDefault();
+      if (localStorage.getItem("yaClickeo")) return;
+
+      btnClickeame.style.transition = "opacity 0.6s cubic-bezier(.68,-0.55,.27,1.55)";
+      btnClickeame.style.opacity = "0";
+      localStorage.setItem("yaClickeo", "1");
+
+      setTimeout(async () => {
+        btnClickeame.style.display = "none";
+        corazonFinal.style.display = "flex";
+        const corazonAnim = corazonFinal.querySelector(".icon-min");
+        if (corazonAnim) {
+          corazonAnim.classList.add("animate-pop-abajo-smooth");
+        }
+        const clicks = await incrementClicks();
+        textoClickeame.textContent = `Tú y ${clicks - 1} personas más han lo clickearon  :)`;
+        setTimeout(() => {
+          textoClickeame.classList.add("fade-in-smooth");
+        }, 300);
+      }, 600);
+    });
+
+    async function getClicks() {
+      const result = await actions.getClicks();
+      if (result.error) {
+        console.error(result.error);
+      }
+      return result.data?.clicks ?? 0;
+    }
+
+    async function incrementClicks() {
+      const result = await actions.incrementClicks();
+      if (result.error) {
+        console.error(result.error);
+      }
+      return result.data?.clicks ?? 0;
+    }
+  });
+</script>
+
+<style>
+  @keyframes pop-abajo-smooth {
+    0% {
+      opacity: 0;
+      transform: translateY(-40px) scale(0.4);
+    }
+    60% {
+      opacity: 1;
+      transform: translateY(12px) scale(1.15);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  .animate-pop-abajo-smooth {
+    animation: pop-abajo-smooth 1.1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  }
+  @keyframes fadeInSmooth {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .fade-in-smooth {
+    animation: fadeInSmooth 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+</style>

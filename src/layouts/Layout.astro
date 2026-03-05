@@ -2,24 +2,21 @@
 import Footer from "@/components/layout/Footer.astro";
 import "../styles/global.css";
 import Nav from "@/components/layout/Nav.astro";
+import MetaTags from "@/components/layout/MetaTags.astro";
 ---
 
 <!doctype html>
 <html lang='es'>
   <head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width' />
-    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-    <meta name='generator' content={Astro.generator} />
-    <title>Brayan Cordova | Desarrollador Web - Portafolio de Proyectos</title>
-    <meta
-      name='keywords'
-      content='Brayan Cordova, desarrollador web, portafolio de desarrollador web, proyectos web, desarrollo frontend, desarrollo backend, JavaScript, React, Node.js, Astro JS, Next.js, Tailwind CSS, Preact, TypeScript, Vercel, Git, MySQL, SEO, Google Analytics, diseño UX/UI, desarrollo de aplicaciones web, soluciones web personalizadas, desarrollador web Perú, desarrollador web Lima, Gunix06, creación de experiencias web, optimización web, desarrollo de plataformas web, consultor web, web developer, web development, web designer, web design, webmaster, webmaster Perú, webmaster Lima, webmaster Lima Perú'
+    <MetaTags
+      title={"Brayan Cordova | Desarrollador Web - Portafolio de Proyectos"}
+      description={"Soy Brayan Cordova, un apasionado desarrollador web. Conoce mi trabajo en la creación de aplicaciones web modernas, atractivas y centradas en el usuario."}
+      autor={"Brayan Cordova"}
     />
   </head>
   <body>
     <Nav />
-    <main>
+    <main class='flex flex-col items-start w-full grow duration-300 f-base b-mb'>
       <slot />
     </main>
     <Footer />
