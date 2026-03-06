@@ -1,0 +1,21 @@
+---
+import Button from '@components/ui/Button.astro';
+import Eye from '@assets/icons/Eye.svg'
+
+interface Props {
+  title: string;
+  company: string;
+  link: string;
+}
+
+const { title, company, link } = Astro.props as Props;
+---
+<div class='flex px-4 py-2 justify-between items-center gap-1 bg-neutral-950 border border-neutral-900 b-round'>
+  <div class='flex flex-col gap-1'>
+    <p class='f-sm font-bold'>{title.toUpperCase()}</p>
+    <p class='f-xs font-bold text-red-300'>{company}</p>
+  </div>
+  <Button label='Ver certificacion' href={link}>
+    <Eye class='size-3 md:size-4' />
+  </Button>
+</div>

@@ -4,12 +4,12 @@ export const navigation = [
     label: 'Sobre mi',
   },
   {
-    slug: '#section-skill',
-    label: 'Habilidades',
-  },
-  {
     slug: '#section-projects',
     label: 'Proyectos',
+  },
+  {
+    slug: '#section-skill',
+    label: 'Habilidades',
   },
   {
     slug: '#section-contact',

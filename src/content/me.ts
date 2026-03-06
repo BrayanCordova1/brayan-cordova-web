@@ -1,5 +1,6 @@
 import Spain from "@assets/icons/flag/Spain.svg";
 import ReinoUnido from "@assets/icons/flag/ReinoUnido.svg";
+import { tecnologies } from "./tecnologies";
 
 export const idiomas = [
   {
@@ -29,4 +30,29 @@ export const education = [
     empresa: "CIBERTEC - Formación Profesional Técnica Superior",
     date: "Jul 2022 - Jul 2025"
   }
+]
+
+export const habTecnicas = [
+  tecnologies.Astro,
+  tecnologies.Nextjs,
+  tecnologies.React,
+  tecnologies.Preact,
+  tecnologies.Nodejs,
+  tecnologies.Javascript,
+  tecnologies.Typescript,
+  tecnologies.Tailwindcss,
+  tecnologies.Vercel,
+  tecnologies.Mysql,
+  tecnologies.Bootstrap,
+  tecnologies.Seo,
+  tecnologies.GoogleAnalitycs,
+  tecnologies.OracleVmVirtualBox,
+  tecnologies.Trello,
+  tecnologies.Office365,
+]
+
+export const habDiseño = [
+  tecnologies.Figma,
+  tecnologies.Photoshop,
+  tecnologies.Illustrator
 ]

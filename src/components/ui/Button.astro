@@ -10,7 +10,7 @@ const { href, label, class: className, ...rest } = Astro.props as ButtonProps;
 
 const Tag = href ? "a": "button";
 ---
-<Tag href={href} class={`bg-red-600 hover:bg-red-800 duration-500 b-round inline-flex justify-center items-center gap-1 py-2 px-3 xl:px-5 ${className}`} {...rest}>
+<Tag href={href} class={`bg-red-600 hover:bg-red-800 duration-500 b-round inline-flex justify-center items-center gap-1 py-1 px-2 md:px-3 md:py-2 xl:px-5 ${className}`} {...rest}>
     <slot/>
     <div class="text-center justify-start f-sm text-nowrap">{label}</div>
 </Tag>

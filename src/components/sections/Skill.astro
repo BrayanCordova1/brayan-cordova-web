@@ -1,0 +1,40 @@
+---
+import {habDiseño, habTecnicas} from "@/content/me";
+import Certification from "@components/ui/Certification.astro";
+import FrameworkCard from "@components/ui/FrameworkCard.astro";
+import Title from "@components/ui/Title.astro";
+---
+
+<div class='flex flex-col items-center gap-6'>
+  <Title id='section-skill' title='Habilidades y certificaciones' description='Conoce mis habilidades que tengo técnicos y softskills, además de algunas certificacione' />
+
+  <div class='grid grid-cols-1 md:grid-cols-2 gap-8'>
+    <div class='flex flex-col gap-4 flex-[1_0_0%]'>
+      <div class='flex flex-col gap-3'>
+        <p class='font-bold'>Habilidades técnicas</p>
+
+        <diV class='flex flex-wrap gap-y-2 gap-x-2.5'>
+          {habTecnicas.map(hab => <FrameworkCard title={hab.name} Icon={hab.icon} />)}
+        </diV>
+      </div>
+
+      <div class='flex flex-col gap-3'>
+        <p class='font-bold'>Habilidades de Diseño</p>
+
+        <diV class='flex flex-wrap gap-y-2 gap-x-2.5'>
+          {habDiseño.map(hab => <FrameworkCard title={hab.name} Icon={hab.icon} />)}
+        </diV>
+      </div>
+    </div>
+
+    <div class='flex flex-col items-start gap-2.5 flex-[1_0_0%]'>
+      <p class='font-bold'>Certificaciones</p>
+
+      <diV class='grid grid-cols-1 self-stretch gap-y-2 gap-x-2.5'>
+        <Certification title='GitHub Foundations' company='GITHUB' link='https://www.credly.com/badges/53e6243f-289c-4f5b-bd19-9f656181c7fb/linked_in_profile' />
+        <Certification title='FUNDAMENTOS DE PROGRAMACIÓN Y TECNOLOGÍAS DE LA INFORMACIÓN' company='CIBERTEC' link='https://drive.google.com/file/d/1fdOxpFykdzLmF7Arrr8QRdEvPORluUFY/view?usp=sharing' />
+        <Certification title='The Frontend Developer Career Path' company='SCRIMBA' link='https://scrimba.com/certificate-cert24zAwPPowNQbsZ9S5UjmDzeEbHVd7EkoepQ7z' />
+      </diV>
+    </div>
+  </div>
+</div>

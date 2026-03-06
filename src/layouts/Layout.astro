@@ -3,6 +3,8 @@ import Footer from "@/components/layout/Footer.astro";
 import "../styles/global.css";
 import Nav from "@/components/layout/Nav.astro";
 import MetaTags from "@/components/layout/MetaTags.astro";
+import '@fontsource/kodchasan';
+import '@fontsource-variable/jost';
 ---
 
 <!doctype html>
@@ -16,7 +18,7 @@ import MetaTags from "@/components/layout/MetaTags.astro";
   </head>
   <body>
     <Nav />
-    <main class='flex flex-col items-start w-full grow duration-300 f-base b-mb b-px gap-2 md:gap-8 xl:gap-14 2xl:gap-24'>
+    <main class='flex flex-col items-start w-full grow duration-300 f-base b-mb b-px gap-14 2xl:gap-24'>
       <slot />
     </main>
     <Footer />

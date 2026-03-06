@@ -9,22 +9,22 @@
 
 @utility f-h1
 {
-  @apply font-kodchasan transition-all text-white font-bold text-3xl md:text-3xl lg:text-5xl xl:text-7xl;
+  @apply font-kodchasan transition-all text-white font-bold text-3xl md:text-3xl lg:text-5xl xl:text-7xl leading-snug;
 }
 
 @utility f-h2
 {
-  @apply font-kodchasan transition-all text-white font-bold text-3xl md:text-3xl lg:text-5xl xl:text-6xl;
+  @apply font-kodchasan transition-all text-white font-bold text-3xl md:text-3xl lg:text-5xl xl:text-6xl leading-snug;
 }
 
 @utility f-h3
 {
-  @apply font-kodchasan transition-all text-white font-bold text-sm md:text-sm lg:text-2xl xl:text-3xl;
+  @apply font-kodchasan transition-all text-white font-bold text-sm md:text-sm lg:text-2xl xl:text-3xl leading-snug;
 }
 
 @utility f-h4
 {
-  @apply font-kodchasan transition-all text-white font-bold text-xs md:text-xs lg:text-xs xl:text-base;
+  @apply font-kodchasan transition-all text-white font-bold text-xs md:text-xs lg:text-xs xl:text-base leading-snug;
 }
 
 @utility f-xl
