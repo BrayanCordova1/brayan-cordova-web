@@ -8,9 +8,9 @@ import AboutMe from '@/components/sections/AboutMe.astro';
 ---
 
 <Layout>
-	<Home />
+	<Home server:defer />
 	<AboutMe />
 	<Proyectos />
 	<Skill />
-	<Contact />
+	<Contact server:defer />
 </Layout>
