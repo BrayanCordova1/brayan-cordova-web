@@ -1,13 +1,10 @@
 ---
 import Peru from "@assets/icons/flag/Peru.svg";
-import Github from "@assets/icons/logo/Github.svg";
-import Document from "@assets/icons/Document.svg";
-import Linkedin from "@assets/icons/logo/Linkedin.svg";
-import Email from "@assets/icons/logo/Email.svg";
 import SocialItem from "@components/ui/SocialItem.astro";
 import CardExperience from "@components/ui/CardExperience.astro";
 import Title from "@components/ui/Title.astro";
-import { idiomas } from "@/content/me";
+import {idiomas, experience, education} from "@/content/me";
+import {redes} from "@/content/redes";
 ---
 
 <div class='flex flex-col items-center gap-6 self-stretch'>
@@ -36,39 +33,27 @@ import { idiomas } from "@/content/me";
 
   <div class='flex flex-col border border-transparent b-round [border-image:linear-gradient(180deg,#171717_0%,#0A0A0A00_100%)_1] w-full'>
     <div class='grid grid-flow-col items-center overflow-x-auto self-stretch'>
-      <SocialItem link='https://github.com/BrayanCordova1' label='GIthub'>
-        <Github class={"size-4 lg:size-7"} />
-      </SocialItem>
-      <SocialItem link='https://drive.google.com/file/d/1GX42Bo-XzRpDILvAX1o31ICYhKJexsRb/view?usp=sharing' label='CV'>
-        <Document class={"size-4 lg:size-7"} />
-      </SocialItem>
-      <SocialItem link='https://www.linkedin.com/in/brayan-cordova-tasayco/' label='Linkedin'>
-        <Linkedin class={"size-4 lg:size-7"} />
-      </SocialItem>
-      <SocialItem link='mailto:brayansmithcordovatasayco@gmail.com' label='Email'>
-        <Email class={"size-4 lg:size-7"} />
-      </SocialItem>
+      {
+        redes.map(Red => (
+          <SocialItem link={Red.href} label={Red.label}>
+            <Red.icon class={"size-4 lg:size-7"} />
+          </SocialItem>
+        ))
+      }
     </div>
 
     <div class='grid grid-cols-1 md:grid-cols-2'>
       <div class='flex px-4 py-6 flex-col gap-2 md:gap-4'>
         <h3 class='f-h3 text-neutral-400'>Experiencia</h3>
-        <div class='flex flex-col items-start gap-2.5 '>
-          <CardExperience
-            title='Lead Frontend developer & UX/UI Designer'
-            ong='ONG Mujer la educación es poder'
-            description='Desarrollé y desplegué una plataforma web para una ONG, mejorando la experiencia del usuario, el rendimiento y el SEO. Lideré el equipo de desarrollo y aseguré la adaptabilidad multiplataforma, utilizando tecnologías como React, Tailwind CSS y Astro.'
-            date='Dic 2024 - Feb 2025'
-          >
-          </CardExperience>
+        <div class='flex flex-col items-start gap-2.5'>
+          {experience.map(exp => <CardExperience title={exp.title} emp={exp.empresa} description={exp.description} date={exp.date} />)}
         </div>
       </div>
 
       <div class='flex px-4 py-6 flex-col gap-2 md:gap-4'>
         <h3 class='f-h3 text-neutral-400'>Educación</h3>
         <div class='flex flex-col items-start gap-2.5'>
-          <CardExperience title='Computación e informática' ong='CIBERTEC - Formación Profesional Técnica Superior' date='Jul 2022 - Jul 2025'>
-          </CardExperience>
+          {education.map(edu => <CardExperience title={edu.title} emp={edu.empresa} date={edu.date} />)}
         </div>
       </div>
     </div>
@@ -77,7 +62,7 @@ import { idiomas } from "@/content/me";
       <h3 class='f-h3 text-neutral-400'>Idiomas que hablo</h3>
       <div class='flex items-start gap-8 flex-wrap'>
         {
-          idiomas.map((idioma) => (
+          idiomas.map(idioma => (
             <div class='flex items-center gap-3'>
               <idioma.icon class={"size-10 md:size-12"} />
               <div class='flex flex-col items-start justify-center self-stretch'>

@@ -1,0 +1,24 @@
+---
+import ProjectCard from "@components/ui/ProjectCard.astro";
+import {projects} from "@/content/projects";
+import Title from "../ui/Title.astro";
+---
+
+<div class='flex flex-col items-center gap-6 self-stretch'>
+  <Title id='section-projects' title='Mis trabajos & proyectos' description='Una selección de aplicaciones web, plataformas y proyectos de infraestructura que he desarrollado' />
+
+  <div class='items-start content-start gap-5 self-stretch grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+    {
+      projects.map(project => (
+        <ProjectCard title={project.title} description={project.description} image={project.image} link={project.link}>
+          {project.tecnologies.map(Tecnology => (
+            <div class='inline-flex px-4 py-2 items-center gap-2 b-round border border-neutral-900 bg-neutral-950 hover:bg-neutral-900 duration-500'>
+              <Tecnology.icon class='icon-min' />
+              <p class='f-sm'>{Tecnology.name}</p>
+            </div>
+          ))}
+        </ProjectCard>
+      ))
+    }
+  </div>
+</div>

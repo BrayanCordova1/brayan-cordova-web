@@ -96,3 +96,7 @@
 {
   @apply mb-5 md:mb-8 lg:mb-11 xl:mb-16
 }
+
+@utility icon-min{
+  @apply size-3 md:size-4 lg:size-5
+}
