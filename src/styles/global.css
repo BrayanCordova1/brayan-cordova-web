@@ -4,7 +4,6 @@
 {
   --font-jost: 'Jost', sans-serif;
   --font-kodchasan: 'Kodchasan', sans-serif;
-  --color-gradiant: linear-gradient(180deg, #0A0A0A -12.79%, #171717 100%);
 }
 
 @utility f-h1
@@ -60,31 +59,6 @@
 @utility b-round-t
 {
   @apply rounded-t-sm md:rounded-t-md lg:rounded-t-lg xl:rounded-t-lg;
-}
-
-@utility b-round-b
-{
-  @apply rounded-b-sm md:rounded-b-md lg:rounded-b-lg xl:rounded-b-lg;
-}
-
-@utility b-round-tr
-{
-  @apply rounded-tr-sm md:rounded-tr-md lg:rounded-tr-lg xl:rounded-tr-lg;
-}
-
-@utility b-round-tl
-{
-  @apply rounded-tl-sm md:rounded-tl-md lg:rounded-tl-lg xl:rounded-tl-lg;
-}
-
-@utility b-round-bl
-{
-  @apply rounded-bl-sm md:rounded-bl-md lg:rounded-bl-lg xl:rounded-bl-lg;
-}
-
-@utility b-round-br
-{
-  @apply rounded-br-sm md:rounded-br-md lg:rounded-br-lg xl:rounded-br-lg;
 }
 
 @utility b-px
