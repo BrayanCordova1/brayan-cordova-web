@@ -56,3 +56,21 @@ export const habDiseño = [
   tecnologies.Photoshop,
   tecnologies.Illustrator
 ]
+
+export const certifications = [
+  {
+    title: "GitHub Foundations",
+    empresa: "GITHUB",
+    link: "https://www.credly.com/badges/53e6243f-289c-4f5b-bd19-9f656181c7fb/linked_in_profile"
+  },
+  {
+    title: "Fundamentos de Programación y Tecnologías de la Información",
+    empresa: "CIBERTEC",
+    link: "https://drive.google.com/file/d/1fdOxpFykdzLmF7Arrr8QRdEvPORluUFY/view?usp=sharing"
+  },
+  {
+    title: "Frontend Developer Career Path",
+    empresa: "SCRIMBA",
+    link: "https://scrimba.com/certificate-cert24zAwPPowNQbsZ9S5UjmDzeEbHVd7EkoepQ7z"
+  }
+] 
