@@ -36,7 +36,7 @@ export const tecnologies = {
   Mysql: { name: "Mysql", icon: MysqlIcon },
   Bootstrap: { name: "Bootstrap", icon: BootstrapIcon },
   Seo: { name: "Seo", icon: SeoIcon },
-  GoogleAnalitycs: { name: "GoogleAnalitycs", icon: GoogleAnalitycsIcon },
+  GoogleAnalitycs: { name: "Google Analitycs", icon: GoogleAnalitycsIcon },
   OracleVmVirtualBox: { name: "OracleVmVirtualBox", icon: OracleVmVirtualBoxIcon },
   Trello: { name: "Trello", icon: TrelloIcon },
   Office365: { name: "Office365", icon: Office365Icon },
