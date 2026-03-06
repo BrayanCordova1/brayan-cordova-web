@@ -10,7 +10,7 @@ import { navigation } from "@/content/navigation";
     <span class='text-neutral-400 f-sm'>Frontend Developer</span>
   </div>
   <div class='b-round border border-neutral-900 md:bg-neutral-950/50 md:flex gap-2 items-center'>
-    <button id='open-menu-btn'>
+    <button id='open-menu-btn' aria-label="Abrir menú principal">
       <Menu class='cursor-pointer md:hidden' />
     </button>
 		{navigation.map(item => (
