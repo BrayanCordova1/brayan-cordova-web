@@ -1,6 +1,6 @@
-import HyperGamerX from "@assets/imgs/projects/hypergamerx.png";
-import Ruleta from "@assets/imgs/projects/ruleta-nextjs.png"
-import Calculadora from "@assets/imgs/projects/calculator.png"
+import HyperGamerX from "@assets/imgs/projects/hypergamerx.webp";
+import Ruleta from "@assets/imgs/projects/ruleta-nextjs.webp"
+import Calculadora from "@assets/imgs/projects/calculator.webp"
 import { tecnologies } from "./tecnologies";
 
 export const projects = [
