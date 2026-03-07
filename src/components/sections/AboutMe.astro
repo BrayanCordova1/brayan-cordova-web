@@ -45,14 +45,14 @@ import {redes} from "@/content/redes";
     <div class='grid grid-cols-1 md:grid-cols-2'>
       <div class='flex px-4 py-6 flex-col gap-2 md:gap-4'>
         <h3 class='f-h3 text-neutral-400'>Experiencia</h3>
-        <div class='flex flex-col items-start gap-2.5'>
+        <div class='flex flex-col items-start gap-2.5 lg:gap-8'>
           {experience.map(exp => <CardExperience title={exp.title} emp={exp.empresa} description={exp.description} date={exp.date} />)}
         </div>
       </div>
 
       <div class='flex px-4 py-6 flex-col gap-2 md:gap-4'>
         <h3 class='f-h3 text-neutral-400'>Educación</h3>
-        <div class='flex flex-col items-start gap-2.5'>
+        <div class='flex flex-col items-start gap-2.5 lg:gap-8'>
           {education.map(edu => <CardExperience title={edu.title} emp={edu.empresa} date={edu.date} />)}
         </div>
       </div>

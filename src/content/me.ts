@@ -9,13 +9,19 @@ export const idiomas = [
     icon: Spain
   },
   {
-    idioma: "Ingles",
-    nivel: "A2 (Aprendiendo)",
+    idioma: "Inglés",
+    nivel: "Pre-Intermedio (En formación activa)",
     icon: ReinoUnido
   }
 ]
 
 export const experience = [
+  {
+    title: "Fundador & Desarrollador Java/Web",
+    empresa: "Lumia Creators",
+    description: "Encargado de la viabilidad técnica y logística de eventos en vivo. Desarrollo mods y mecánicas personalizadas en Java (Fabric), y gestiono la optimización de servidores para soportar múltiples usuarios sin caídas de rendimiento, integrando el aspecto técnico con la experiencia de la comunidad",
+    date: "Ene 2026 - Actualidad"
+  },
   {
     title: "Lead Frontend developer & UX/UI Designer",
     empresa: "ONG Mujer la educación es poder",
@@ -28,7 +34,7 @@ export const education = [
   {
     title: "Computación e informática",
     empresa: "CIBERTEC - Formación Profesional Técnica Superior",
-    date: "Jul 2022 - Jul 2025"
+    date: "Jul 2022 - Ene 2026"
   }
 ]
 

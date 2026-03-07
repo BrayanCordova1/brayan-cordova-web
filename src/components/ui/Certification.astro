@@ -15,7 +15,7 @@ const { title, company, link } = Astro.props as Props;
     <p class='f-sm font-bold'>{title.toUpperCase()}</p>
     <p class='f-xs font-bold text-red-300'>{company}</p>
   </div>
-  <Button label='Ver certificacion' href={link}>
+  <Button href={link} aria-label={"Ver certificación"}>
     <Eye class='size-3 md:size-4' />
   </Button>
 </div>

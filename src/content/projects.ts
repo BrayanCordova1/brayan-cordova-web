@@ -6,7 +6,7 @@ import { tecnologies } from "./tecnologies";
 export const projects = [
   {
     title: "HyperGamerX - Blog de videojuegos",
-    description: "Desarrollé una plataforma de artículos de videojuegos con un enfoque en diseño y experiencia de usuario utilizando Figma. Se optimizo la pagina web, además, de centrarse en el SEO y la integración de Google Analitycs",
+    description: "Desarrollé una plataforma de artículos de videojuegos con un enfoque en diseño y experiencia de usuario utilizando Figma. Se optimizó la pagina web, además, de centrarse en el SEO y la integración de Google Analitycs",
     image: HyperGamerX,
     link: "https://www.hypergamerx.com/",
     tecnologies: [
