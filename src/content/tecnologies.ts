@@ -18,6 +18,15 @@ import TrelloIcon from '@assets/icons/tecnologies/Trello.svg';
 import Office365Icon from '@assets/icons/tecnologies/Office 365.svg';
 import PhotoshopIcon from '@assets/icons/tecnologies/Photoshop.svg';
 import IllustratorIcon from '@assets/icons/tecnologies/Illustrator.svg';
+import Cloudflare from "@assets/icons/tecnologies/Cloudflare.svg"
+import Resend from "@assets/icons/tecnologies/Resend.svg"
+import Java from "@assets/icons/tecnologies/Java.svg"
+import Datapack from "@assets/icons/tecnologies/Datapack.svg"
+import Expo from "@assets/icons/tecnologies/Expo.svg"
+import Supabase from "@assets/icons/tecnologies/Supabase.svg"
+import Mdx from "@assets/icons/tecnologies/Mdx.svg"
+import Json from "@assets/icons/tecnologies/Json.svg"
+import FabricMc from "@assets/icons/tecnologies/FabricMc.svg"
 
 export type Tecnology = { name: string; icon: ImageMetadata };
 
@@ -42,6 +51,16 @@ export const tecnologies = {
   Office365: { name: "Office365", icon: Office365Icon },
   Photoshop: { name: "Photoshop", icon: PhotoshopIcon },
   Illustrator: { name: "Illustrator", icon: IllustratorIcon },
+  Cloudflare: { name: "Cloudflare", icon: Cloudflare },
+  Resend: { name: "Resend", icon: Resend },
+  Java: {name: "Java", icon: Java},
+  Datapack: {name: "Datapack", icon: Datapack},
+  ReactNative: {name: "React Native", icon: ReactIcon},
+  Expo: {name: "Expo", icon: Expo},
+  Supabase: {name: "Supabase", icon: Supabase},
+  Mdx: {name: "Mdx", icon: Mdx},
+  Json: {name: "Json", icon: Json},
+  FabricMc: {name: "FabricMc", icon: FabricMc}
 } satisfies Record<string, Tecnology>;
 
 export const tecnologiesList: Tecnology[] = Object.values(tecnologies);
