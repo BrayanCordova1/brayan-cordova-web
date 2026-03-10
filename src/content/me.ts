@@ -34,7 +34,7 @@ export const education = [
   {
     title: "Computación e informática",
     empresa: "CIBERTEC - Formación Profesional Técnica Superior",
-    date: "Jul 2022 - Ene 2026"
+    date: "Jun 2022 - Ene 2026"
   }
 ]
 
@@ -53,8 +53,6 @@ export const habTecnicas = [
   tecnologies.Seo,
   tecnologies.GoogleAnalitycs,
   tecnologies.OracleVmVirtualBox,
-  tecnologies.Trello,
-  tecnologies.Office365,
   tecnologies.Java,
   tecnologies.Datapack,
   tecnologies.FabricMc,

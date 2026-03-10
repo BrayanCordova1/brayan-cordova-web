@@ -14,8 +14,6 @@ import BootstrapIcon from '@assets/icons/tecnologies/Bootstrap.svg';
 import SeoIcon from '@assets/icons/tecnologies/SEO.svg';
 import GoogleAnalitycsIcon from '@assets/icons/tecnologies/Google Analytics.svg';
 import OracleVmVirtualBoxIcon from '@assets/icons/tecnologies/Oracle VM Virtual Box.svg';
-import TrelloIcon from '@assets/icons/tecnologies/Trello.svg';
-import Office365Icon from '@assets/icons/tecnologies/Office 365.svg';
 import PhotoshopIcon from '@assets/icons/tecnologies/Photoshop.svg';
 import IllustratorIcon from '@assets/icons/tecnologies/Illustrator.svg';
 import Cloudflare from "@assets/icons/tecnologies/Cloudflare.svg"
@@ -47,8 +45,6 @@ export const tecnologies = {
   Seo: { name: "Seo", icon: SeoIcon },
   GoogleAnalitycs: { name: "Google Analitycs", icon: GoogleAnalitycsIcon },
   OracleVmVirtualBox: { name: "OracleVmVirtualBox", icon: OracleVmVirtualBoxIcon },
-  Trello: { name: "Trello", icon: TrelloIcon },
-  Office365: { name: "Office365", icon: Office365Icon },
   Photoshop: { name: "Photoshop", icon: PhotoshopIcon },
   Illustrator: { name: "Illustrator", icon: IllustratorIcon },
   Cloudflare: { name: "Cloudflare", icon: Cloudflare },
