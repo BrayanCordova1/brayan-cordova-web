@@ -55,6 +55,16 @@ export const habTecnicas = [
   tecnologies.OracleVmVirtualBox,
   tecnologies.Trello,
   tecnologies.Office365,
+  tecnologies.Java,
+  tecnologies.Datapack,
+  tecnologies.FabricMc,
+  tecnologies.Json,
+  tecnologies.ReactNative,
+  tecnologies.Supabase,
+  tecnologies.Expo,
+  tecnologies.Cloudflare,
+  tecnologies.Resend,
+  tecnologies.Mdx
 ]
 
 export const habDiseño = [
